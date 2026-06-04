@@ -13,7 +13,8 @@ jobs:
 
       - name: Get repository name
         run: |
-          echo "REPO_NAME=$(basename ${{ github.repository }})" >> $GITHUB_ENV
+          REPO_NAME=$(basename ${{ github.repository }})
+          echo "REPO_NAME=${REPO_NAME,,}" >> $GITHUB_ENV
 
       - name: Set release version
         run: |
