@@ -23,7 +23,7 @@ RUN groupadd --system volvo4evcc && \
     useradd --system --create-home -g volvo4evcc volvo4evcc
 
 RUN  apt-get update \
-  && apt-get install --no-install-recommends -y libicu76 \
+  && apt-get install --no-install-recommends -y ca-certificates libicu76 \
   && rm -rf /var/lib/apt/lists/* \
   && echo
 
